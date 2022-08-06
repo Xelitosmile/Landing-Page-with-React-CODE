@@ -1,4 +1,9 @@
 import React from "react";
+import Card from "./card";
+import Navbar from "./navbar";
+import Footer from "./footer";
+import Topp from "./Header";
+
 
 //include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
@@ -6,20 +11,20 @@ import rigoImage from "../../img/rigo-baby.jpg";
 //create your first component
 const Home = () => {
 	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+<>	
+	<Navbar/>
+	<Topp/>
+		<div className="row">
+		
+		<Card url = "https://lamaquinamedio.com/wp-content/uploads/2020/02/screen-4-1-850x560.jpg"/>
+		<Card url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAvpsC94VGxw9pMi-D5tWRXVeUqnmosVow8w&usqp=CAU"/>
+		<Card url = "https://pm1.narvii.com/6643/455de566b353b447433e7572cb9b611f2fcc548c_hq.jpg"/>
+		<Card url = "https://e7.pngegg.com/pngimages/296/68/png-clipart-pokemon-pokemon.png"/>
+			
 		</div>
+	<Footer/>
+
+		</>
 	);
 };
 
